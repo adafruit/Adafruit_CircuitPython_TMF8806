@@ -24,14 +24,12 @@ Table of Contents
 .. toctree::
     :caption: Tutorials
 
-.. todo:: Add any Learn guide links here. If there are none, then simply delete this todo and leave
-    the toctree above for use later.
+    Learn Guide <https://learn.adafruit.com/adafruit-tmf8806-time-of-flight-distance-sensor>
 
 .. toctree::
     :caption: Related Products
 
-.. todo:: Add any product links here. If there are none, then simply delete this todo and leave
-    the toctree above for use later.
+    Adafruit TMF8806 Time of Flight Distance Sensor - 10mm to 5m - STEMMA QT / Qwiic <https://www.adafruit.com/product/6501>
 
 .. toctree::
     :caption: Other Links
