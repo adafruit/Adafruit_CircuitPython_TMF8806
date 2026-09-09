@@ -7,5 +7,8 @@
 API Reference
 #############
 
-.. automodule:: adafruit_tmf8806
+.. automodule:: adafruit_tmf8806.tmf8806
     :members:
+
+.. automodule:: adafruit_tmf8806.tmf8806_firmware
+    :no-members:
