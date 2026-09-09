@@ -283,7 +283,7 @@ unpacks or indexes those positions works against either sensor.
 """
 
 
-class TMF8806:
+class TMF8806:  # noqa: PLR0904
     """Driver for the ams OSRAM TMF8806 Time-of-Flight distance sensor.
 
     :param ~busio.I2C i2c: The I2C bus the TMF8806 is connected to.
@@ -397,7 +397,7 @@ class TMF8806:
         if use_calibration:
             payload = self._calibration_data
             if use_state:
-                payload = payload + self._algorithm_state
+                payload += self._algorithm_state
             self._write_reg(_CONFIG, payload)
 
         command = bytearray(_CMD_BLOCK_SIZE)
@@ -729,7 +729,7 @@ class TMF8806:
         if self._histogram_raw is None:
             self._histogram_raw = bytearray(_HIST_CHUNK_BYTES)
         self._write_histogram_mask(1 << histogram_type)
-        self._int_enable = self._int_enable | _INT_DIAGNOSTIC
+        self._int_enable |= _INT_DIAGNOSTIC
 
     def disable_histogram(self) -> None:
         """Stop histogram output and release the memory it used.
@@ -737,7 +737,7 @@ class TMF8806:
         :raises RuntimeError: if the sensor does not accept the command.
         """
         self._write_histogram_mask(0)
-        self._int_enable = self._int_enable & ~_INT_DIAGNOSTIC
+        self._int_enable &= ~_INT_DIAGNOSTIC
         self._histogram_type = None
         self._histogram_raw = None
         gc.collect()
